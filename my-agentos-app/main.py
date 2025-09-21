@@ -1,17 +1,14 @@
+from _agents import agno_expert_consultant_agent, gemini_agent
+from _teams import rag_team  # Import your new team
 from agno.os import AgentOS
-from _agents import agent_one, agent_two  # Import your defined agents
-from _teams import my_agent_team  # Import your defined team
 
-# Create the AgentOS instance
+# Create the AgentOS
 agent_os = AgentOS(
     os_id="my-agentos-app",
-    agents=[agent_one, agent_two],  # List your agents here
-    teams=[my_agent_team],  # List your teams here
+    agents=[gemini_agent, agno_expert_consultant_agent],
+    teams=[rag_team],  # Add the rag_team to the list
 )
-
-# Get the application instance
 app = agent_os.get_app()
 
 if __name__ == "__main__":
-    # Start the AgentOS application server
     agent_os.serve(app="main:app", reload=True)
