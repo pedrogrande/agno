@@ -1,0 +1,14 @@
+agno
+openai
+ddgs
+yfinance
+lancedb
+tantivy
+pypdf
+requests
+exa-py
+newspaper4k
+lxml_html_clean
+sqlalchemy
+psycopg2-binary
+agno
